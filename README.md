@@ -1,9 +1,11 @@
 ## This project is socket-io playground.
 
 Task
-- [x] typescript setup
-- [ ] add socket-io
-- [ ] add axios
-- [ ] play around with socket io
-- [ ] connect with some API with axios
-- [ ] testing connect
+- [x] Typescript setup
+- [x] Express setup
+- [x] Add socket-io
+- [x] Simple socket-io client-server
+- [ ] Add axios
+- [ ] Play around with socket io
+- [ ] Connect with some API with axios
+- [ ] Testing connect

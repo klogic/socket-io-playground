@@ -1,3 +1,4 @@
+import axios from 'axios';
 import express, { Request, Response } from 'express';
 import ioserver, { Socket } from 'socket.io';
 import ioclient from 'socket.io-client';
@@ -11,7 +12,10 @@ app.get('/', (req: Request, res: Response) => {
   socketclient.on('connect', () => {
     socketclient.emit('my other event', { my: 'data' });
   });
-  res.send('Hello World!');
+  axios
+    .get('https://jsonplaceholder.typicode.com/users')
+    .then((result) => res.json(result.data))
+    .catch((error) => res.json(error.message));
 });
 
 io.on('connection', (socket: Socket) => {
